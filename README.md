@@ -13,7 +13,7 @@ Personal website of **Toufiq Hamid**, built with [Jekyll](https://jekyllrb.com/)
 | `projects.md` | Project showcase |
 | `about.md` | About / contact |
 | `_config.yml` | Jekyll site configuration |
-| `Untitled8.ipynb` | Colab notebook: AI script-to-video agent experiment |
+| `notebooks/ai-video-agent.ipynb` | Colab notebook: AI script-to-video agent experiment |
 | `.github/workflows/jekyll-gh-pages.yml` | Build & deploy workflow |
 
 ## Local development

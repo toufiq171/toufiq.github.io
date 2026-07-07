@@ -7,6 +7,10 @@ baseurl: ""
 
 theme: minima
 
+# Footer contact/social (rendered by the minima theme)
+email: toufiqhamid171@gmail.com
+github_username: toufiq171
+
 header_pages:
   - projects.md
   - about.md

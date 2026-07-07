@@ -25,7 +25,7 @@ video assembly are up next.
   <span class="tag">Colab</span>
 </p>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/toufiq171/toufiq.github.io/blob/main/Untitled8.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/toufiq171/toufiq.github.io/blob/main/notebooks/ai-video-agent.ipynb)
 
 </div>
 
@@ -45,7 +45,7 @@ shielding."* Includes saving generated images straight to Google Drive.
   <span class="tag">Colab</span>
 </p>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/toufiq171/toufiq.github.io/blob/main/Untitled8.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/toufiq171/toufiq.github.io/blob/main/notebooks/ai-video-agent.ipynb)
 
 </div>
 
