@@ -1,0 +1,187 @@
+---
+---
+
+@import "minima";
+
+/* ============================================
+   Animations & polish
+   ============================================ */
+
+/* --- Page load: fade content in with a gentle rise --- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-content .wrapper > * {
+  animation: fade-up 0.6s ease-out both;
+}
+
+/* Stagger the first few blocks for a cascading entrance */
+.page-content .wrapper > *:nth-child(1) { animation-delay: 0.05s; }
+.page-content .wrapper > *:nth-child(2) { animation-delay: 0.15s; }
+.page-content .wrapper > *:nth-child(3) { animation-delay: 0.25s; }
+
+/* --- Scroll reveal (elements get .reveal via JS) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Animated gradient accent for the hero name --- */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #2a7ae2, #9b59b6, #e67e22, #2a7ae2);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 6s ease infinite;
+}
+
+/* --- Waving hand --- */
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10%, 30%      { transform: rotate(16deg); }
+  20%           { transform: rotate(-8deg); }
+  40%           { transform: rotate(-4deg); }
+  50%           { transform: rotate(8deg); }
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2.4s ease-in-out infinite;
+}
+
+/* --- Link & heading hover polish --- */
+.page-content a:not(.post-link) {
+  transition: color 0.2s ease;
+}
+
+.site-title, .site-nav .page-link {
+  transition: opacity 0.2s ease;
+}
+
+.site-nav .page-link:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+/* --- Project cards --- */
+.project-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h2:first-child,
+.project-card h2 {
+  margin-top: 0;
+}
+
+/* --- Tech tag chips --- */
+.tags {
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #555;
+  background: #f2f4f8;
+  border: 1px solid #e2e6ee;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  margin: 0 0.3rem 0.35rem 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover .tag {
+  background: #e9eef7;
+}
+
+/* --- Status badges --- */
+.status {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  margin-left: 0.5rem;
+}
+
+.status-wip {
+  color: #8a6100;
+  background: #fff3cd;
+}
+
+.status-done {
+  color: #1d643b;
+  background: #d9f2e3;
+}
+
+.status-live {
+  color: #0b5394;
+  background: #dbeafe;
+}
+
+.status-live::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2a7ae2;
+  margin-right: 0.35rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+/* --- Accessibility: honor reduced-motion preference --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
