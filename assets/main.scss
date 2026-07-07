@@ -104,6 +104,72 @@
   margin-top: 0;
 }
 
+/* --- Tech tag chips --- */
+.tags {
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #555;
+  background: #f2f4f8;
+  border: 1px solid #e2e6ee;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  margin: 0 0.3rem 0.35rem 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover .tag {
+  background: #e9eef7;
+}
+
+/* --- Status badges --- */
+.status {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  margin-left: 0.5rem;
+}
+
+.status-wip {
+  color: #8a6100;
+  background: #fff3cd;
+}
+
+.status-done {
+  color: #1d643b;
+  background: #d9f2e3;
+}
+
+.status-live {
+  color: #0b5394;
+  background: #dbeafe;
+}
+
+.status-live::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2a7ae2;
+  margin-right: 0.35rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
 /* --- Accessibility: honor reduced-motion preference --- */
 @media (prefers-reduced-motion: reduce) {
   *,
