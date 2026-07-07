@@ -1,0 +1,17 @@
+title: Toufiq Hamid
+description: >-
+  Personal site and portfolio of Toufiq Hamid — experiments in AI,
+  machine learning, and generative media.
+url: "https://toufiq171.github.io"
+baseurl: ""
+
+theme: minima
+
+header_pages:
+  - projects.md
+  - about.md
+
+# Keep repo housekeeping files out of the built site
+exclude:
+  - README.md
+  - .github/
