@@ -1,9 +1,8 @@
 ---
 layout: home
-title: Home
 ---
 
-Hi, I'm **Toufiq Hamid** 👋
+# Hi, I'm <span class="gradient-text">Toufiq Hamid</span> <span class="wave">👋</span>
 
 I like building things with AI — from generative image models to
 automated video pipelines. This site collects my experiments and notes.
